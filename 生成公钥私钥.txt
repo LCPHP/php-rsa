@@ -1,0 +1,5 @@
+下载开源RSA密钥生成工具openssl（通常Linux系统都自带该程序），解压缩至独立的文件夹，进入其中的bin目录，执行以下命令：
+openssl genrsa -out rsa_private_key.pem 1024
+openssl pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -out private_key.pem
+openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
+第一条命令生成原始 RSA私钥文件 rsa_private_key.pem，第二条命令将原始 RSA私钥转换为 pkcs8格式，第三条生成RSA公钥 rsa_public_key.pem
