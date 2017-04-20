@@ -1,11 +1,8 @@
-# php-rsa
-
-php rsa 加密解密类  
-
-使用示例 demo.php  
-
-```php
 <?php
+/**
+ * Rsa 加密解密示例
+ * author ：niklaslu <332553882@qq.com>
+ */
 
 require_once 'vendor/autoload.php';
 
@@ -44,4 +41,3 @@ echo "<br>";
 $dec = $Rsa->decryptByPrivate($enc);
 echo $dec;
 echo "<br>";
-```
